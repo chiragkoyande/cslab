@@ -1,0 +1,12 @@
+supplemental_tool=python-standard-library
+sample_plaintext= THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+caesar_shift=3
+caesar_ciphertext= WKH TXLFN EURZQ IRA MXPSV RYHU WKH ODCB GRJ
+caesar_round_trip= THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+frequency_top5= [('R', 4), ('H', 3), ('W', 2), ('K', 2), ('X', 2)]
+playfair_key=MONARCHY
+playfair_plaintext=INSTRUMENTS
+playfair_ciphertext= GATLMZCLRQXA
+md5= ad2c6db16220e303b9dfe0334985ed30
+sha256= d21fd399eefd2031aad14c2b64cf933428b2e56242c35a195e21c6c8ef160c79
+python_exit=0

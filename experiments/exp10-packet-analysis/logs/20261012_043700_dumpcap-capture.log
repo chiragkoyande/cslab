@@ -1,0 +1,4 @@
+Capturing on 'Loopback: lo'
+File: experiments/exp10-packet-analysis/outputs/loopback_capture.pcap
+Packets: 1 Packets: 2 Packets: 3 Packets: 20 Packets: 22 Packets: 23 Packets: 24 Packets captured: 24
+Packets received/dropped on interface 'Loopback: lo': 24/0 (pcap:0/dumpcap:0/flushed:0/ps_ifdrop:0) (100.0%)

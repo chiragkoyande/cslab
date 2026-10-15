@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import socket,struct; s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM); s.bind(("127.0.0.1",15353)); s.settimeout(15); data,addr=s.recvfrom(2048); response=data[:2]+struct.pack("!HHHHH",0x8180,1,0,0,0)+data[12:]; s.sendto(response,addr); print("dns_server_received_bytes=%s sent_bytes=%s peer=%s" % (len(data),len(response),addr)); s.close()
+                                                                                                                                      ~~~~~~~~~~^^^^^^
+TimeoutError: timed out

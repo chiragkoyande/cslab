@@ -1,0 +1,2 @@
+discarded-capture-review-logs-removed=1
+The removed logs corresponded to broad loopback captures that included unrelated local resolver/application traffic. Final reviewed artifacts remain.

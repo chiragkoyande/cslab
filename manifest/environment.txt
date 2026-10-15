@@ -1,0 +1,20 @@
+Run date: 2026-10-12
+Host OS: Fedora Linux 43 Workstation Edition
+Kernel: Linux 6.17.13-200.fc42.x86_64
+Architecture: x86_64
+Memory: approximately 15 GiB total
+Free disk at preflight: approximately 3.6 GiB on /home
+Workspace: /home/chiragk/Projects/cslab
+VirtualBox: not detected
+VMware: not detected
+Kali VM: not found during workspace/host preflight
+Docker: 29.6.2 (/usr/bin/docker); existing unrelated containers left untouched
+Podman: 5.8.4 (/usr/bin/podman); no new image pulled
+Firefox: detected (/usr/bin/firefox)
+Screenshot utilities: gnome-screenshot, grim, screenshot not detected during preflight
+Network scope: loopback/internal lab services only
+Experiment 1: skipped at user request
+Installed relevant tools: nmap 7.92, httpd 2.4.68, MariaDB 10.11.18, john 1.9.0, openssl 3.5.7, tcpdump 4.99.6, Wireshark/TShark 4.6.1, Firefox 146.0
+Unavailable relevant tools: setoolkit, hashcat, nikto, zaproxy, snort, hping3, ufw, apache2 service name, apt
+Capture note: direct tcpdump lacked CAP_NET_RAW; capability-enabled dumpcap was used for the reviewed loopback PCAP
+GUI note: Firefox headless screenshot attempts did not produce a file; no screenshot is claimed

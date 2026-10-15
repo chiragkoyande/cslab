@@ -1,0 +1,9 @@
+lo               UNKNOWN        127.0.0.1/8 
+enp3s0           DOWN           
+wlp0s20f3        UP             10.179.218.16/24 2409:40c2:104c:b7e0:e8e9:e607:6402:b177/64 fe80::2859:50e9:7142:a926/64 
+br-01cb045f12e8  UP             172.18.0.1/16 
+br-113942fd041e  DOWN           172.20.0.1/16 
+br-208fa60334ea  UP             172.19.0.1/16 fc00:f853:ccd:e793::1/64 fe80::683f:fbff:feb3:8b2f/64 
+docker0          DOWN           172.17.0.1/16 
+veth5180690@if2  UP             
+veth1330423@if2  UP             

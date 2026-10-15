@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import socket,struct; name=b'localhost'; qname=b''.join(bytes([len(part)])+part for part in name.split(b'.'))+b'\x00'; packet=struct.pack('!HHHHHH',0x5432,0x0100,1,0,0,0)+qname+struct.pack('!HH',1,1); s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM); s.settimeout(3); s.sendto(packet,('127.0.0.1',15353)); response,peer=s.recvfrom(2048); print('dns_query=localhost server=127.0.0.1:15353 response_bytes=%s peer=%s' % (len(response),peer)); s.close()
+                                                                                                                                                                                                                                                                                                                                     ~~~~~~~~~~^^^^^^
+TimeoutError: timed out

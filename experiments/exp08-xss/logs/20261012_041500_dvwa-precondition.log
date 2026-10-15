@@ -1,0 +1,3 @@
+url=http://127.0.0.1/dvwa/ curl_exit=7
+url=http://127.0.0.1/DVWA/ curl_exit=7
+url=http://127.0.0.1/dvwa/vulnerabilities/xss_r/ curl_exit=7

@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Cybersecurity Lab QR Demonstration</title></head>
+<body>
+  <h1>Benign local QR demonstration</h1>
+  <p>This page is intentionally harmless and is served only from 127.0.0.1 for Experiment 2.</p>
+  <p>No credentials, forms, tracking, redirects, or external resources are used.</p>
+</body>
+</html>
+server_pid=408449 curl_exit=0

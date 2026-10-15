@@ -1,0 +1,23 @@
+tcpdump version 4.99.6
+libpcap version 1.10.6 (64-bit time_t, with TPACKET_V3)
+OpenSSL 3.5.7 9 Jun 2026
+64-bit build, 64-bit time_t
+1.wlp0s20f3 [Up, Running, Wireless, Associated]
+2.br-01cb045f12e8 [Up, Running, Connected]
+3.br-208fa60334ea [Up, Running, Connected]
+4.veth5180690 [Up, Running, Connected]
+5.veth1330423 [Up, Running, Connected]
+6.any (Pseudo-device that captures on all interfaces) [Up, Running]
+7.lo [Up, Running, Loopback]
+8.enp3s0 [Up, Disconnected]
+9.br-113942fd041e [Up, Disconnected]
+10.docker0 [Up, Disconnected]
+11.bluetooth0 (Bluetooth adapter number 0) [Wireless, Association status unknown]
+12.bluetooth-monitor (Bluetooth Linux Monitor) [Wireless]
+13.usbmon4 (Raw USB traffic, bus number 4)
+14.usbmon3 (Raw USB traffic, bus number 3)
+15.usbmon2 (Raw USB traffic, bus number 2)
+16.usbmon1 (Raw USB traffic, bus number 1)
+17.usbmon0 (Raw USB traffic, all USB buses) [none]
+18.nflog (Linux netfilter log (NFLOG) interface) [none]
+19.nfqueue (Linux netfilter queue (NFQUEUE) interface) [none]

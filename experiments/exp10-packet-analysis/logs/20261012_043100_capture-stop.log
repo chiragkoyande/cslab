@@ -1,0 +1,4 @@
+dumpcap_pid=448324 dumpcap_alive_after_sigint=0 http_pid=448322 udp_pid=448323
+experiments/exp10-packet-analysis/outputs/loopback_capture.pcap: pcapng capture file - version 1.0
+-rw-------. 1 chiragk chiragk 9.5K Oct 12 04:18 experiments/exp10-packet-analysis/outputs/loopback_capture.pcap
+temporary_pid_files_removed=0

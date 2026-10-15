@@ -1,0 +1,4 @@
+restorecon: SELinux: Could not get canonical path for /home/chiragk/.mozilla/firefox/*/gmp-widevinecdm/* restorecon: No such file or directory.
+*** You are running in headless mode.
+firefox_exit=0
+experiments/exp02-social-engineering/evidence/20261012_034500_EXP02_local-demo.png: cannot open `experiments/exp02-social-engineering/evidence/20261012_034500_EXP02_local-demo.png' (No such file or directory)

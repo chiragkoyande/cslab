@@ -1,0 +1,2 @@
+  --headless         Run without a GUI.
+  --screenshot [<path>] Save screenshot to <path> or in working directory.

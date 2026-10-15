@@ -1,0 +1,2 @@
+restorecon: SELinux: Could not get canonical path for /home/chiragk/.mozilla/firefox/*/gmp-widevinecdm/* restorecon: No such file or directory.
+Mozilla Firefox 146.0

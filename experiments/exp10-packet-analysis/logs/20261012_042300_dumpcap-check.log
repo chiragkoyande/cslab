@@ -1,0 +1,20 @@
+/usr/bin/dumpcap cap_net_admin,cap_net_raw=ep
+1. wlp0s20f3
+2. br-01cb045f12e8
+3. br-208fa60334ea
+4. veth5180690
+5. veth1330423
+6. any
+7. lo (Loopback)
+8. enp3s0
+9. br-113942fd041e
+10. docker0
+11. bluetooth0
+12. bluetooth-monitor
+13. usbmon4
+14. usbmon3
+15. usbmon2
+16. usbmon1
+17. usbmon0
+18. nflog
+19. nfqueue

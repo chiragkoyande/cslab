@@ -1,0 +1,69 @@
+{
+  "run_id": "20261012-cslab-initial",
+  "start_time": "2026-10-12T03:39:53+05:30",
+  "end_time": "2026-10-12T04:52:45+05:30",
+  "host_os": "Fedora Linux 43 Workstation Edition",
+  "architecture": "x86_64",
+  "workspace": "/home/chiragk/Projects/cslab",
+  "lab_scope": ["127.0.0.1", "localhost", "explicitly started local lab services"],
+  "vm_identifiers": [],
+  "tool_versions": {
+    "nmap": "7.92",
+    "httpd": "2.4.68 (Fedora Linux)",
+    "mariadb": "10.11.18",
+    "john": "1.9.0",
+    "openssl": "3.5.7",
+    "tcpdump": "4.99.6",
+    "wireshark": "4.6.1",
+    "tshark": "4.6.1",
+    "firefox": "146.0",
+    "python": "system python3; qrcode module available",
+    "docker": "29.6.2; unrelated containers left untouched",
+    "podman": "5.8.4; no new image pulled"
+  },
+  "experiment_statuses": {
+    "01": "NOT STARTED — user requested skip",
+    "02": "PARTIAL",
+    "03": "PARTIAL",
+    "04": "BLOCKED — source manual not supplied",
+    "05": "PARTIAL",
+    "06": "PARTIAL",
+    "07": "BLOCKED",
+    "08": "BLOCKED",
+    "09": "BLOCKED",
+    "10": "PARTIAL",
+    "11": "BLOCKED",
+    "12": "BLOCKED",
+    "13": "PARTIAL"
+  },
+  "commands": [
+    {"experiment": "02", "command": "python3 -m http.server 18082 --bind 127.0.0.1", "exit_code": 0, "output": "experiments/exp02-social-engineering/logs/20261012_034400_demo-curl.log"},
+    {"experiment": "02", "command": "curl http://127.0.0.1:18082/demo.html", "exit_code": 0, "output": "experiments/exp02-social-engineering/logs/20261012_034400_demo-curl.log"},
+    {"experiment": "03", "command": "python3 experiments/exp03-cryptanalysis/outputs/supplemental_demo.py", "exit_code": 0, "output": "experiments/exp03-cryptanalysis/logs/20261012_035200_supplemental-demo.log"},
+    {"experiment": "05", "command": "nmap -sV -p 80 127.0.0.1", "exit_code": 0, "output": "experiments/exp05-vulnerability-scanning/logs/20261012_040100_nmap-port80.log"},
+    {"experiment": "05", "command": "nmap --script vuln -p 80 127.0.0.1", "exit_code": 0, "output": "experiments/exp05-vulnerability-scanning/logs/20261012_040200_nmap-vuln-port80.log"},
+    {"experiment": "06", "command": "printf 'password' | md5sum", "exit_code": 0, "output": "experiments/exp06-password-audit/logs/20261012_040500_md5-generation.log"},
+    {"experiment": "06", "command": "hashcat -m 0 -a 0 outputs/hash.txt outputs/wordlist.txt", "exit_code": 127, "output": "experiments/exp06-password-audit/logs/20261012_040800_hashcat.log"},
+    {"experiment": "06", "command": "john --format=raw-md5 --wordlist=outputs/wordlist.txt outputs/hash.txt", "exit_code": 1, "output": "experiments/exp06-password-audit/logs/20261012_041000_john-run.log"},
+    {"experiment": "07", "command": "curl probes to 127.0.0.1/dvwa", "exit_code": 7, "output": "experiments/exp07-sqli/logs/20261012_041500_dvwa-precondition.log"},
+    {"experiment": "08", "command": "curl probes to 127.0.0.1/dvwa", "exit_code": 7, "output": "experiments/exp08-xss/logs/20261012_041500_dvwa-precondition.log"},
+    {"experiment": "09", "command": "curl http://127.0.0.1/dvwa/ and ZAP executable check", "exit_code": 7, "output": "experiments/exp09-owasp-zap/logs/20261012_041500_precondition.log"},
+    {"experiment": "10", "command": "dumpcap -i lo with exact local test filters", "exit_code": 0, "output": "experiments/exp10-packet-analysis/outputs/loopback_capture.pcap"},
+    {"experiment": "10", "command": "tshark protocol/filter review of loopback_capture.pcap", "exit_code": 0, "output": "experiments/exp10-packet-analysis/logs/20261012_044900_final-protocol-hierarchy.log"},
+    {"experiment": "11", "command": "python3 -m http.server 18080 --bind 127.0.0.1", "exit_code": 0, "output": "experiments/exp11-firewall-ids/logs/20261012_050100_baseline-curl.log"},
+    {"experiment": "12", "command": "curl --head http://127.0.0.1:80", "exit_code": 7, "output": "experiments/exp12-dos-mitigation/logs/20261012_050500_apache-baseline.log"},
+    {"experiment": "13", "command": "nmap -sV -sC -p 80 127.0.0.1 -oN vulnerability_report.txt", "exit_code": 0, "output": "experiments/exp13-assessment-compliance/outputs/vulnerability_report.txt"}
+  ],
+  "screenshots": [],
+  "cleanup_verification": [
+    {"experiment": "02", "result": "server stopped; post-cleanup curl exit 7 on port 18082"},
+    {"experiment": "10", "result": "dumpcap and local test services stopped; ports 18083, 18084, 15353 closed; loopback had no PROMISC flag"},
+    {"experiment": "11", "result": "baseline server stopped; port 18080 closed"},
+    {"experiment": "07/08", "result": "no DVWA payload sent; no stored XSS content created"},
+    {"experiment": "11/12", "result": "no firewall rule, UFW policy, or SYN test changed host state"}
+  ],
+  "notes": [
+    "No secrets, credentials, tokens, or VM disk images are stored in this manifest.",
+    "The supplied duplicate Experiment 5 filename CS_Exp5(1).docx was not accessible locally; no duplicate work was performed."
+  ]
+}

@@ -1,0 +1,4 @@
+tcpdump: lo: You don't have permission to perform this capture on that device
+(Attempt to create packet socket failed - CAP_NET_RAW may be required)
+http_pid=440889 udp_pid=440891 capture_pid=440892
+capture_alive=1

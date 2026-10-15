@@ -1,0 +1,1 @@
+dns_query=localhost resolver=127.0.0.53 response_bytes=43 peer=('127.0.0.53', 53)

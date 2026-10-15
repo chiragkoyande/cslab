@@ -1,0 +1,41 @@
+# Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*password*
+*passwd*
+*credentials*
+*cookie*
+
+# VM and local application state
+*.vdi
+*.vmdk
+*.vbox
+*.ova
+*.qcow2
+*.img
+browser-profile/
+
+# Temporary files and generated caches
+*.tmp
+*.swp
+*.bak
+__pycache__/
+.pytest_cache/
+.DS_Store
+
+# Potentially sensitive captures unless explicitly reviewed
+*.pcap
+*.pcapng
+*.cap
+*.dump
+*.dmp
+*.pid
+!experiments/exp10-packet-analysis/outputs/loopback_capture.pcap
+
+# Local-only scratch files
+scratch/
+tmp/
